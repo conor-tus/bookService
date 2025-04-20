@@ -21,19 +21,19 @@ import java.time.format.DateTimeFormatter;
 public class BaseEntity {
 
     @CreatedDate
-    @Column(updatable = false)
+    @Column(updatable = true)
     private String createdAt;
 
     @CreatedBy
-    @Column(updatable = false)
+    @Column(updatable = true)
     private String createdBy;
 
     @LastModifiedDate
-    @Column(insertable = false)
+    @Column(insertable = true)
     private String updatedAt;
 
     @LastModifiedBy
-    @Column(insertable = false)
+    @Column(insertable = true)
     private String updatedBy;
 
     @PrePersist
